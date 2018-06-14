@@ -11,6 +11,19 @@ This repository contains submissions for CSOC Week 5. Refer `submissions/hello-d
 + A [Centralized repo](https://github.com/rosarior/awesome-django) for books on Django, website ideas and more
 + For ideas related to django frontend, refer [this](https://django-frontend-skeleton.readthedocs.io/en/latest/)
 
+## Brownie Points
+
++ A Logical Roadmap - Not just a website with bunch of features
++ Backend models(prefer SQL) with a simple database
++ UI/UX of the website
++ Django Forms
++ Google Analytics integration
++ User login/profile
++ Social Media integration
++ Using external API's
++ List/QuerySet iterators in python
++ Misc - directory structure and neat code 
+
 ## Contributing guidelines
 
 + Fork this repo
