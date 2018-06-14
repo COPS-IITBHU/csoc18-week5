@@ -1,6 +1,6 @@
 # csoc18-week5
 
-This repository contains submissions for CSOC Week 5. Refer `submissions/hello-django` for a starter website
+This repository contains submissions for CSOC Week 5. Refer `submissions/hello-django` for a starter website. You can use it as boilerplate for further developing. **Don't forget** to add a `README.md`, describing your team name, website idea and member details.
 
 
 ## Django tutorials and resources
@@ -13,6 +13,7 @@ This repository contains submissions for CSOC Week 5. Refer `submissions/hello-d
 
 ## Brownie Points
 
++ Team participation - Preferably in groups of two or three
 + A Logical Roadmap - Not just a website with bunch of features
 + Backend models(prefer SQL) with a simple database
 + UI/UX of the website
