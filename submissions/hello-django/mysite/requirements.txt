@@ -18,7 +18,9 @@ pkg-resources==0.0.0
 PyJWT==1.6.4
 pylint==1.8.3
 python-openid==2.2.5
+dj_database_url==0.5.0
 pytz==2018.4
+psycopg2==2.7.2
 requests==2.19.1
 requests-oauthlib==1.0.0
 singledispatch==3.4.0.3
