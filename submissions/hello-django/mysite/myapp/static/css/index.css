@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'starWars';
+    src: url('../fonts/DISTGA__.ttf');
+}
+
+body {
+    background: url('../images/star-wars-stormtrooper-4k-2048x1152.jpg');
+    background-size: cover;
+}
+
+.display-3 {
+    font-family: 'starWars' !important; 
+}
