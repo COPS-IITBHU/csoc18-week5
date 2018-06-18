@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/selectupdate.css' %}">        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <div class="h1" style="font-family: starWars">Select Transaction to Edit</div>
+            {% for arm in armoury %}
+            <div class="row">
+                <button type="button" class="btn btn-outline-danger" style="width: 100%; margin:0.6%;"><a href="/{{ arm.id }}/" style="text-decoration: none; color: inherit;">Transaction #{{ arm.id }} : {{ arm.item_name }}</a></button> 
+            </div>  
+            {% endfor %}
+        </div>
+    </body>
+</html>

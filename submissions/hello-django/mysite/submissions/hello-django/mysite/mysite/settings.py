@@ -1,13 +1,15 @@
 # Django settings for mysite project.
 import os
-import dj_database_url
 from django.core.urlresolvers import reverse_lazy
-from decouple import config
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
@@ -21,20 +23,15 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
-        'default': dj_database_url.config(
-            default=config('DATABASE_URL')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),                      # Or path to database file if using sqlite3.
+        #'USER': '',                      # Not used with sqlite3.
+        #'PASSWORD': '',                  # Not used with sqlite3.
+        #'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        #'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    }
 }
-
-SOCIAL_AUTH_GITHUB_KEY = '0cb4481ab1dbcdc596b4'
-SOCIAL_AUTH_GITHUB_SECRET = '9bc5618f99d19d0bceaab643a6cb402e0e409d5d'
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '82676703598-dauo5ovicovue3k83fp9oniq3nav0is0.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'N1HlpmRRJLlmzBPXULrQOxC7'
-SOCIAL_AUTH_FACEBOOK_KEY = '1575940109181740'
-SOCIAL_AUTH_FACEBOOK_SECRET = 'd1f0b8a4891e097166c2e60bd773a965'
-
-
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -75,16 +72,18 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
+STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
+STATIC_URL = '/static/'
 
 # Additional locations of static files
-#STATICFILES_DIRS = (
+STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-#)
+)
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -95,7 +94,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'lie0p&amp;7dlb*qc8!tz4de_$r@_@rqy%q^&amp;gnob$fec@7zb-wn_v'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -143,7 +142,6 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'social_django.context_processors.backends', 
                 'social_django.context_processors.login_redirect',
-                'mysite.context_processors.ga_tracking_id',
             ],
         },
     },
@@ -151,15 +149,11 @@ TEMPLATES = [
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.github.GithubOAuth2',
-    'social_core.backends.open_id.OpenIdAuth',  
-    'social_core.backends.google.GoogleOpenId',  
-    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
     'social_core.backends.facebook.FacebookOAuth2',
 
     'django.contrib.auth.backends.ModelBackend',
 )
-
-GA_TRACKING_ID = 'UA-120905258-1'
 
 INSTALLED_APPS = (
     'myapp.apps.MyappConfig',

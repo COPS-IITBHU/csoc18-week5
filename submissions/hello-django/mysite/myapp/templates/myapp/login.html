@@ -1,23 +1,19 @@
-{% load staticfiles %}
+{% extends "myapp/base.html" %}
 
-<html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{% static 'css/index.css' %}">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <div class="jumbotron text-center">
-            <h1>Log in</h1>
+{% block body %}
+        <div class="container text-center" style="margin:1.4%">
+            <h1 style="font-family: 'starWars'; color: yellow">Log in</h1>
             <form method="post">
                 {% csrf_token %}
                 {% include './formtemplate.html' %}
                 <div class="form-group">
                     <button type="submit" class="btn btn-success">Log In</button><br>
-                </div>
+                </div><br>
+                <div style="margin: 0.7%;"><span style="color: rgb(131, 131, 216);">No account?</span><a class="btn btn-success" style="margin: 0.7%;" href="{% url 'register' %}"><i class="fab fa-empire"></i>Sign Up!</a></div><br>
+                <h3>---------OR---------</h3><br>
+                <a href="{% url 'social:begin' 'github' %}" class="btn btn-dark" style="margin: 0.7%;"><i class="fab fa-github" style="margin: 0.2%;"></i>Login with Github</a>
+                <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-danger" style="margin: 0.7%;"><i class="fab fa-google" style="margin: 0.2%;"></i>Login with Google</a>                
+                <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-primary" style="margin: 0.7%;"><i class="fab fa-facebook-square" style="margin: 0.2%;"></i>Login with Facebook</a>
             </form>
         </div>
-    </body>
-</html>
+{% endblock %}

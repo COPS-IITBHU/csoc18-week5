@@ -1,24 +1,25 @@
-{% load staticfiles %}
+{% extends "myapp/base.html" %}
 
-<html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{% static 'css/index.css' %}">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <div class="container text-center">
-            <h1 style="margin-top: 7%; margin-bottom: 7%;">Register</h1>
+{% block body %}
+        <div class="container" style="padding: 5%;">
+            <div class="text-center">
+            <h1 style="margin-top: 5%; margin-bottom: 5%; font-family: 'starWars'; color: yellow;">Register</h1>
+            </div>
+
+            <div style="position:relative; float:left;">
             <form class="form-horizontal" action="" method="post">
                 {% csrf_token %}
                 {% include 'myapp/formtemplate.html' %}
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success">Submit</button><br>
-                    <a href="/login/" class="btn btn-info">Log In</a>
+                    <button type="submit" class="btn btn-success">Submit</button><br><br>
                 </div>
             </form>
+            </div>
+            <div style="position:relative; float:right;">
+                <h5 style="color: white;">---------OR---------</h5><br>
+                <a href="{% url 'social:begin' 'github' %}" class="btn btn-dark"><i class="fab fa-github" style="margin: 0.6%;"></i>Login with Github</a><br><br>
+                <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-danger darken-4" style="margin: 0.7%;"><i class="fab fa-google" style="margin: 0.6%;"></i>Login with Google</a><br><br>
+                <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-primary" style="margin: 0.7%;"><i class="fab fa-facebook-square" style="margin: 0.6%;"></i>Login with Facebook</a>
+            </div>
         </div>
-    </body>
-</html>
+{% endblock %}

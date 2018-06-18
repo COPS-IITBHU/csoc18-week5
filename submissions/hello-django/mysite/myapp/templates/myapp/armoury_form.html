@@ -1,16 +1,8 @@
-{% load staticfiles %}
+{% extends "myapp/base.html" %}
 
-<html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{% static 'css/index.css' %}">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    </head>
-    <body>
+{% block body %}
         <div class="container text-center">
-            <h1 style="margin-top: 7%; margin-bottom: 7%;">Add to the Armoury</h1>
+            <h1 style="margin-top: 4%; margin-bottom: 4%; font-family: 'starWars'; color:limegreen;">Add to the Armoury</h1>
             <form class="form-horizontal" action="" method="post">
                 {% csrf_token %}
                 {% include 'myapp/formtemplate.html' %}
@@ -19,5 +11,4 @@
                 </div>
             </form>
         </div>
-    </body>
-</html>
+{% endblock %}
