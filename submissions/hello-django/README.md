@@ -2,9 +2,9 @@
 _TatooineTroopers_
 
 ### member details :-
-Yash Jipkate _mec17_  
+Yash Jipkate **mec17**  
 Rupal Sharma _min17_  
-Anshul Shrivastava _eee17_  
+Anshul Shrivastava **eee17**
 
 **_hosted here_**: _https://csocheroku.herokuapp.com/_
 
