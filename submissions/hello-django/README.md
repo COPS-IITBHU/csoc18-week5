@@ -18,7 +18,7 @@ The _Empire_ has grown to new heights and it is becoming increasingly necessary 
 
 * The site keeps track of all the transactions occuring in the inventory
 * It also allows to add new traansactions
-* It also allows to edit previously erred transactions (the _Empire_ is not bad as they say:))
+* It also allows to edit previously erred transactions (the _Empire_ is not bad as they say:D)
 * Since many transactions can have repeated items, the **View Weapons Summary** comes handy at knowing the vast diversity of the _Empire's_ might
 * But to make any changes in transaction log, one must be registered in the _Empire's_ database. Since the _Empire_ believes in flourishment of social life, it has also login through Facebook, Google and Github features. Or the subject can register the traditional way.
 * There are many instances of malicious transaction entries, to tackle which it has a geolocation API _(https://ipstack.com/)_ integrated so the _Empire_ knows your location.
