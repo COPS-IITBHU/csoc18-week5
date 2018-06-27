@@ -1,0 +1,56 @@
+{% extends 'myapp/base.html' %}
+{% block body %}
+{% load staticfiles %}
+
+  <style>
+h4,p{
+text-align:center;
+}
+span{
+  color: green;
+  font-weight: bold;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 200px;
+    display: inline-block;
+    margin: 20px
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+</style>
+
+<BR><BR><BR>
+        <div class="alert alert-primary" role="alert" style="text-align:center;">
+        ELECTRONIC PRODUCTS
+        </div>
+
+<div class="productsall">
+
+  {% for product in all_products %}
+  <div class="card">
+  <a href="{% url 'myapp:productdetail' product.id %}"><img src="{{product.image.url}}" alt="Avatar" style="width:100%; min-height:200px;max-height:200px"></a>
+    <div class="container">
+      <h4><b>{{ product.name }}</b></h4>
+      <p>Price: <span> &nbsp; &#x20B9;{{product.price}}</span></p>
+    </div>
+
+    <form action="{% url 'myapp:product-delete' product.id %}" method="post" style="display: inline;text-align:center">
+                                       {% csrf_token %}
+                                       <input type="hidden" name="song_id" value="{{product.id}}" />
+                                       <button style="width:100%" type="submit" class="btn btn-danger btn-xs">
+                                           <span class="glyphicon glyphicon-remove"></span>&nbsp; Delete
+                                       </button>
+</form>
+
+  </div>
+    {% endfor %}
+</div>
+{% endblock %}

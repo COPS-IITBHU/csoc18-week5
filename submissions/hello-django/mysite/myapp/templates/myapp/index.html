@@ -1,0 +1,17 @@
+{% extends 'myapp/base.html' %}
+{% block body %}
+{% load staticfiles %}
+<style>
+.imagewa{
+
+}
+
+</style>
+<div class="main_logo">
+   <h1>BEST PLACE FOR <b>ELECTRONIC PRODUCTS </b> ! </h1><br>
+     <h3>Leading Electronic Store of India</h3><br>
+         <img class="yewala" src="{% static 'myapp/image/logo2.png'%}" alt="Welcome to COPS STORE"><br><br>
+        <a href="/products/"><img src="{% static 'myapp/image/shop.png'%}" alt="Welcome to COPS STORE" height="150" width="150"></a>
+   </div>
+
+{% endblock %}
