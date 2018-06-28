@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light bg-white navbar-expand-md fixed-top">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#leftNavbar">
+		<span class="navbar-toggler-icon mr-auto"></span>
+	</button>
+	<div class="navbar-collapse collapse w-100 order-1 order-md-0" id="leftNavbar">
+		<div class="navbar-nav mr-auto">
+			<a class="nav-item nav-link animate{% if current == 'projects' %} active{% endif %}" href="{% url 'projects:index' %}">PROJECTS</a>
+			<a class="nav-item nav-link animate{% if current == 'clubs' %} active{% endif %}" href="{% url 'clubs:index' %}">CLUBS</a>
+			<a class="nav-item nav-link animate{% if current == 'alumni' %} active{% endif %}" href="{% url 'alumni:index' %}">ALUMNI</a>
+			<a class="nav-item nav-link animate{% if current == 'forum' %} active{% endif %}" href="{% url 'pybb:index' %}">FORUM</a>
+		</div>
+	</div>
+	<div class="mx-auto order-0 order-md-1" id="navHome">
+		<a class="navbar-brand mx-auto{% if current == 'home' %} active{% endif %}" href="{% url 'home' %}">IIT-BHU GUIDE</a>
+		<div class="animate behind"></div>
+	</div>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#rightNavbar">
+		<span class="navbar-toggler-icon mr-auto"></span>
+	</button>
+	<div class="navbar-collapse collapse w-100 order-2" id="rightNavbar">
+		{% block account_bar %}
+			{% include "account_bar.html" %}
+		{% endblock %}
+	</div>
+</nav>

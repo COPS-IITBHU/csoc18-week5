@@ -1,0 +1,119 @@
+{% extends "site_base.html" %}
+{% load static %}
+{% block title %}ALUMNI{% endblock title %}
+{% block styles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% endblock styles %}
+
+{% block nav %}
+{% with current="alumni" %}
+{% include "navigation.html" %}
+{% endwith %}
+{% endblock %}
+
+{% block body %}
+<header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="home">
+  <img class="w3-image" src="{% static 'alumni/alum_photos/alum-collage.jpg' %}" alt="ALUMNI" width="1500" height="0">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>ALUMNI<br></b></span> <span class="w3-hide-small w3-text-light-grey"></span></h1>
+  </div>
+</header>
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>With a legacy spanning almost a hundred years, IIT BHU has given the world individuals, who with their virtues and flair have left impeccable footprints on the sands of time. Here are some of the noteworthy alumni who have achieved great things in life.
+    </p>
+  </div>
+
+  <div class="w3-row-padding ">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'alumni/alum_photos/nikesharora.jpg' %}" alt="Nikesh Arora" style="width:100%">
+      <h3>NIKESH ARORA</h3>
+      <p>Former google executive and current President and COO of the Japanese $70 billion giant SoftBank Corp.<br><br><br><br><br></p>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='http://google.com';" >Details</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static '/alumni/alum_photos/RamCharan.jpg' %}" alt="Ram Charan" style="width:100%">
+      <h3>Dr.RAM CHARAN</h3>
+      
+      <p>He consistently ranked in the Thinkers50 Top Global Business Thinkers ranking from 2005-2009 & was the Economic Times Global Indian of the year in 2009. He was inducted into the Thinkers50 Hall of Fame in 2015.</p>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='http://google.com';" >Details</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'alumni/alum_photos/DeepakAhuja.jpg' %}" alt="Deepak Ahuja" style="width:100%">
+      <h3>DEEPAK AHUJHA</h3>
+      
+      <p>He has been named 'CFO of the Year' by the Silicon Valley Business Journal in the year 2010<br><br><br><br><br></p>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='http://google.com';" >Details</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'alumni/alum_photos/ManojSinha.jpg' %}" alt="Manoj Sinha" style="width:100%">
+      <h3>MANOJ SINHA</h3>
+      
+      <p style="padding-bottom: 20px">Currently the Minister of State for Railways. Popularly known for his work in backward villages. Among the seven most honest MPs according to India Today.<br><br><br></p>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='http://google.com';" >Details</button></p>
+    </div>
+  </div>
+  <div class="w3-row-padding ">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'alumni/alum_photos/PulickelAjayan.jpg' %}" alt="Pulickel Ajayan" style="width:100%">
+      <h3>PULICKEL AJAYAN</h3>
+     
+      <p style="padding-bottom: 24px">He is a pioneer in the field of nanotechnology and mentioned twice in Guinness World Records for making the smallest brush and also the darkest material on Earth which reflects only 0.045% of light.</p>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='http://google.com';" >Details</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'alumni/alum_photos/thomas.gif' %}" alt="thomas" style="width:100%">
+      <h3>THOMAS S.ANANTHARAMAN</h3>
+     
+      <p style="padding-bottom: 24px">He was a part of the team that built the IBM Deep Blue, a chess-playing computer which was the first to beat the World Champion Garry Kasparov.<br><br></p>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='http://google.com';" >Details</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'alumni/alum_photos/anilbhardwaj.jpg' %}" alt="Anil Bhardwaj" style="width:100%">
+      <h3>ANIL BHARDWAJ</h3>
+     
+      <p style="padding-bottom: 13px">Dr. Anil Bhardwaj was inducted in the hall of fame of Distinguished Alumnus Awardees of IIT BHU as a token of appreciation for a wonderful career and an unparalleled contribution to India space research.<br></p>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='http://google.com';" >Details</button></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'alumni/alum_photos/JayChaudhary.jpg' %}" alt="Jay Chaudhary" style="width:100%">
+      <h3>JAY CHAUDHARY</h3>
+     
+      <p style="padding-bottom: 11px">Founder of successful companies like Zscaler, AirDefense, CipherTrust etc. Conferred with Entrepreneur of the Year and Innovator and Influencer.<br><br><br></p>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='http://google.com';" >Details</button></p>
+    </div>
+    </div>
+  <div class="w3-row-padding ">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'alumni/alum_photos/vikaspurohit.jpeg' %}" alt="Vikas Purohit" style="width:100%">
+      <h3>VIKAS PUROHIT</h3>
+     
+      <p style="padding-bottom: 185px">Ex-Amazon fashion head appointed as Vice-president for Paytm payment bank business.</p>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='http://google.com';" >Details</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'alumni/alum_photos/vkbansal.jpeg' %}" alt="V.K BANSAL" style="width:100% ">
+      <h3 style="padding-top: 20px">V.K BANSAL</h3>
+     
+      <p style="padding-bottom: 53px">He single handedly created Bansal Classes, which at one point had a complete dominance over IIT-JEE results.He has created an entire industry by himself, drastically changing the Indian pre- engineering education landscape.</p>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='http://google.com';" >Details</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'alumni/alum_photos/sridharmanthani.jpeg.jpeg' %}" alt="Sridhar Manthani" style="width:70%" class="center" >
+      <h3>SRIDHAR MANTHANI</h3>
+     
+      <p style="padding-bottom: 105px">He is the Senior Director at NVIDIA's Bangalore Design Centre.He built Nvidia India from scratch and developed complete high performance chips from end to end while being based in India.</p>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='http://google.com';" >Details</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'alumni/alum_photos/Krishankanth.jpg' %}" alt="Krishankanth" style="width:100%">
+      <h3>(Late) SHRI KRISHAN KANT</h3>
+     
+      <p>He worked as a Scientist with the Council of Scientific and Industrial Research, New Delhi.
+He was a part of the Quit India movement and the Independence struggle as a youth and continued to be involved in politics, eventually being elected to the Parliament of India.</p>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='http://google.com';" >Details</button></p>
+    </div>
+  </div>
+{% endblock %}

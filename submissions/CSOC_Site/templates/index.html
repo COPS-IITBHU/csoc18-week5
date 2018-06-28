@@ -1,0 +1,34 @@
+{% extends "site_base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block nav %}
+{% with current="home" %}
+{% include "navigation.html" %}
+{% endwith %}
+{% endblock %}
+
+{% block styles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% endblock styles %}
+
+{% block body %}
+	<header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="home">
+  <img class="w3-image" src="../static/images/home-collage.jpg" alt="IIT-BHU" width="1500" height="0">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>IIT-BHU<br></b></span> <span class="w3-hide-small w3-text-light-grey"></span></h1>
+  </div>
+</header>
+
+<div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>IIT (BHU) is not just a name, but a brand. And people here, work hard to live upto the expectations.
+
+It's not just another IIT, it's one of a kind. We probably have one of the largest Alumni Database in our own college. With the 100th year Anniversary of our institution, in 2019, we hope to summon a large no. of our Alumni so that they can guide us better.</p>
+<p>Situated in the holy city of Varanasi, it offers a unique campus life compared to other IITs. Our beautiful campus lies waiting for the newcommers to step in a world they never knew and had no idea about.</p>
+<p>It is a technical institute, and people here do their best to inculcate the technical skills in each and every newcommer through various competitions which occur throughout the year. It's quite impossible to ignore all of them, even if you are without senses. From coding, machine learning to manufacturing skills, each area is tested and hence improved. We have one of the best Technical fest all over India, Technex, which successfully runs with huge participation.</p>
+<p>Not just as a technical Institute, but as a road to know where your interest lies, our institute provides a culture of Councils and Clubs. Be it art, sports, dance, drama, music, sculpture, multilingual, social work, film or photography, we have resources for all, open to all. With one the largest Cultural fest, Kashiyatra, IIT (BHU) offers you everything you ever thought of doing.</p>
+<div class="lead">
+	With good placements, culture and light, we the students of IIT (BHU) welcome the newcomers with open heart.
+</div>
+{% endblock %}
