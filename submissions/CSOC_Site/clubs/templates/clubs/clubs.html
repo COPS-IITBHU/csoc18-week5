@@ -40,7 +40,7 @@
       <h3>{{c.club_name}}</h3>
       <img src="{% static 'clubs/club_photos/' %}{{c.club_image_name}}"  alt="{{c.club_name}}" style="width:30%;" class="center" ><br>
       <p>{{c.club_content}}<br><br></p>
-      <p><button class="center" style="color: #ffff;background-color: #3B5999; "  onclick="location.href='http://{{c.club_link}}';" >facebook</button></p>
+      <p><button class="center" style="color: #ffff;background-color: #3B5999; "  onclick="location.href='{{c.club_link}}' " >facebook</button></p>
     </div>
     <hr></hr>
     {% endfor %}

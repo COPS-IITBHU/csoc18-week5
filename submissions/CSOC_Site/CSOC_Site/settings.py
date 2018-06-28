@@ -83,6 +83,7 @@ TEMPLATES = [
                 'account.context_processors.account',
                 'pinax_theme_bootstrap.context_processors.theme',
                 'main.context_processors.add_login_form',
+                'main.context_processors.googleanalytics'
             ],
         },
     },
@@ -158,3 +159,5 @@ PYBB_MARKUP = 'markdown'
 PYBB_TEMPLATE = "site_base.html"
 PYBB_DEFAULT_TITLE = 'Forums'
 PYBB_NICE_URL = True
+
+GOOGLE_TRACKING_ID = 'UA-121603401-1'
