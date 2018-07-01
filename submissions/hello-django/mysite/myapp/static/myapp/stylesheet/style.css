@@ -1,0 +1,62 @@
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+body,html{
+  height: 100%;
+   margin: 0;
+   background: url(bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+.main_logo{
+  text-align: center;
+  margin-top: 8%;
+}
+.main_logo .yewala{
+    width: 300px;
+}
+
+h1,h3 {
+  font-family: Roboto, sans-serif;
+
+  font-weight: lighter;
+/*
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-image: url(http://tobiasahlin.com/images/typesource/leaves.jpg);
+    background-color: #2b5a33;
+    background-size: cover;
+    padding: 4em 6em 7.5em;*/
+}
+.productsall{
+  padding: 50px
+}

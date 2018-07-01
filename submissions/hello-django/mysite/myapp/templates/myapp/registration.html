@@ -1,0 +1,24 @@
+{% extends 'myapp/base.html' %}
+{% block body %}
+{% load staticfiles %}
+<style media="screen">
+  .formsdes{
+    text-align: center;
+  }
+</style>
+<div class="main_logo">
+         <img src="{% static 'myapp/image/logo2.png'%}" alt="Welcome to COPS STORE">
+   </div>
+
+<div class="formsdes">
+
+<form class="" action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {% include 'myapp/form-template.html' %}
+<button class="btn btn-primary" type="submit">Submit</button>
+
+
+</form>
+
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load staticfiles %}
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+
+<style>
+  h2{
+    text-align: center;
+  }
+  .formwa{
+
+    margin-left: 25%; /* Added */
+
+  }
+</style>
+<br><br><br><br><br>
+  <h2>Sign up</h2>
+  <br><br>
+  <div class="formwa">
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-success">Sign up</button>
+    </form>
+  </div>
+
+{% endblock %}
+{% endblock %}

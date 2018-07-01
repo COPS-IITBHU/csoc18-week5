@@ -1,0 +1,72 @@
+{% extends 'myapp/base.html' %}
+{% block body %}
+{% load staticfiles %}
+
+  <style>
+  .card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
+
+h4,p{
+text-align:center;
+}
+span{
+  color: green;
+  font-weight: bold;
+}
+</style>
+<BR><BR><BR>
+        <div class="alert alert-warning" role="alert" style="text-align:center;">
+        ELECTRONIC PRODUCT
+        </div>
+
+
+
+
+<div class="card" style="width: 350px; text-align:center">
+  <img class="card-img-top" src="{{name.image.url}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><b>{{name.name}}</b></h5>
+
+    <p class="card-text">{{name.description}}</p>
+<h4>Price: <span> &nbsp; &#x20B9;{{name.price}}</span></h4>
+ <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+    BUY
+  </button>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <!-- Button to Open the Modal -->
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Payment Gateway</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+<h4>Payment Window is Closed for Now!</h4>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
