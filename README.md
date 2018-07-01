@@ -1,42 +1,33 @@
-# CSOC-Site
-Django site to help guide freshers and college-aspirants in the amazing life of IIT-BHU!
+# csoc18-week5
 
-### TeamName: 
-Name: **Laplacian Demons**
+This repository contains submissions for CSOC Week 5. Refer `submissions/hello-django` for a starter website. You can use it as boilerplate for further developing. **Don't forget** to add a `README.md`, describing your team name, website idea and member details.
 
-Members:
-* Shivansh Saini
-* P. Shravan Nayak
 
-Website: https://iitbhuguide.ml or https://www.iitbhuguide.ml
+## Django tutorials and resources
 
-### Features
-* Registration/Login with Email confirmation
-* Forum
-* Projects details
-* Club details
-* Alumni details
-* Google Analytics
++ [Official Mozilla Web Dev](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website) Tutorial. These are pretty comprehensive. You need not follow each tutorial.
++ [Django Girls](https://tutorial.djangogirls.org/en/) - You can skip first few posts and begin [at installation](https://tutorial.djangogirls.org/en/django_installation/)
++ [Useful snippets](https://djangosnippets.org/snippets/) for problems you might face while developing website backend
++ A [Centralized repo](https://github.com/rosarior/awesome-django) for books on Django, website ideas and more
++ For ideas related to django frontend, refer [this](https://django-frontend-skeleton.readthedocs.io/en/latest/)
 
-### How to Run it???
-All the required packages are listed in the **requirements.txt** file. Install them all using **pip install -r requirements.txt** at the project root directory (submissions/CSOC_Site/).
-Since the database is included, no need to migrate it. Also, collect all static files for WhiteNoise to use by using **python manage.py collectstatic** again at the project root directory.
-Finally, use **python manage.py runserver** and test the site locally @ http://127.0.0.1:8000 or http://localhost:8000
-For any queries, feel free to open an Issue.
+## Brownie Points
 
-### BROWNIE POINTS
-* Team participation - Preferably in groups of two or three (Yep)
-* A Logical Roadmap - Not just a website with bunch of features (Yep)
-* Backend models(prefer SQL) with a simple database (Yep)
-* UI/UX of the website (Yep)
-* Django Forms (Yep)
-* Google Analytics integration (Yep)
-* User login/profile (Yep)
-* Social Media integration (Nops)
-* Using external API's (Yep)
-* List/QuerySet iterators in python (Getting queryset of all objects, rather than filtering. Does it counts?)
-* Misc - directory structure and neat code (Yep)
++ Team participation - Preferably in groups of two or three
++ A Logical Roadmap - Not just a website with bunch of features
++ Backend models(prefer SQL) with a simple database
++ UI/UX of the website
++ Django Forms
++ Google Analytics integration
++ User login/profile
++ Social Media integration
++ Using external API's
++ List/QuerySet iterators in python
++ Misc - directory structure and neat code 
 
-### Work path
-We faced quite a lot of trouble in gathering projects details and even had to look in other colleges sites to gather some data. We hope that with this step, our respected seniors from other clubs will also come forward and provide the much-needed information.
-And we hope that interested students and new entrants will find the forum interesting and use it well. Currently, due to lack of time, my personal IITBHU email address is used to send emails. I hope to fix that in future.
+## Contributing guidelines
+
++ Fork this repo
++ Create a Django Website
++ Add the source code to `submissions` folder
++ Make a PR
