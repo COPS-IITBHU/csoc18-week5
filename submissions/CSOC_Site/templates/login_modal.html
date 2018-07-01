@@ -1,0 +1,38 @@
+{% load account_tags %}
+{% load bootstrap %}
+{% load i18n %}
+
+<div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 id="loginModalTitle" class="modal-title">Log in to an existing account</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<form class="login" method="POST" action="{% url 'account_login' %}" autocapitalize="off">
+				<div class="modal-body">
+					{% csrf_token %}
+					{{ login_form|bootstrap }}
+					{% if redirect_field_value %}
+						<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+					{% endif %}
+					<a href="{% url 'account_password_reset' %}" class="btn btn-link">{% trans "Forgot your password?" %}</a>
+				
+				{% if ACCOUNT_OPEN_SIGNUP %}
+					<p class="login-signup">
+						<small>
+							{% trans "Don't have an account?" %}  <strong><a href="{% urlnext 'account_signup' %}">{% trans "Sign up" %}</a></strong>
+						</small>
+					</p>
+				{% endif %}
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-primary">{% trans "Log in" %}</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

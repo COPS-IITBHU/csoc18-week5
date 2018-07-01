@@ -1,0 +1,89 @@
+{% extends "site_base.html" %}
+{% load static %}
+{% block title %}PROJECTS{% endblock title %}
+{% block styles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% endblock styles %}
+
+{% block nav %}
+{% with current="projects" %}
+{% include "navigation.html" %}
+{% endwith %}
+{% endblock %}
+
+{% block body %}
+<header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="home">
+  <img class="w3-image" src="{% static 'projects/images/project-collage.jpg' %}" alt="PROJECTS" width="1500" height="0">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>PROJECTS<br></b></span> <span class="w3-hide-small w3-text-light-grey"></span></h1>
+  </div>
+</header>
+ 
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>With several enthusiastic students there are a lot of projects going on in IIT BHU. DIH or Design and Innovation Hub encourages students to take up projects.
+    </p>
+  </div>
+
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="font-size:40px">DIH</h3>
+    <p>
+      The design and Innovation hub was formed in this institute in April 2014 (notified on 15 th April 2014) as an
+outcome of an exhaustive workshop on “Design and Innovation” which was attended by academic thinkers,
+design folk, grass roots inventors, scientist and engineers, social activists and people from humanities.
+</p>
+<h3>The Philosophy of Design and Innovation Hub:</h3>
+<p>The goal of education is to produce students with three qualities:<p>
+<ol>
+  <li>Analytical ability (ability to analyse given situations),</li>
+  <li>Building ability (ability to design with creativity), and</li>
+  <li>Caring and character (sensitivity to others and courage to act on one’s beliefs)</li>
+</ol>
+<p> These are the ABC of education. A and B pertain to “how to do” and C pertains to “what” and “why” of life.
+Many students, when they enter engineering, are full of enthusiasm to understand new areas, to build
+systems and to experiment and play with them. The primary goal of the Design and Innovation Hub (DIH)
+is to tap this enthusiasm and to direct it to exploration and sustained pursuit by the student which may
+result in development of a deeper interest in the chosen area or topic of study. The students would be
+encouraged to do research and undertake design and build things he or she dreams, thus converting his
+hard work into a journey of joy.
+The DIH also encourages faculty members to blend the creativity and zeal of students with their own rich
+experience and come up solutions on societal or industrial problems.</p><br>
+<h3>Working of Design and Innovation Hub:</h3>
+<p>Design and Innovation Hub would sponsor the following types of projects:</p>
+<ol>
+  <li>Summer projects that can be undertaken by students in their summer vacations</li>
+  <li>Projects that are carried out by students to compete in international events or events of repute.</li>
+  <li>Extended projects (can be continued as a B Tech Project)</li>
+</ol>
+<p>Besides these the DIH also provides financial assistance to people undertaking these projects. There are several projects going on in IIT BHU. Here are some of the popular ones.</p>
+
+
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Popular Projects</h3>
+  </div>
+
+  <div class="w3-row-padding ">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'projects/images/averera.jpeg' %}" alt="averera" style="width:100%">
+      <h3>AVERERA</h3>
+      
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='/projects/team/TEAM AVERERA';" >Details</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'projects/images/trident.jpg' %}" alt="trident" style="width:100%">
+      <h3>TRIDENT(ATV)</h3>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='/projects/team/TEAM TRIDENT';" >Details</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'projects/images/auv.jpeg' %}" alt="auv" style="width:100%">
+      <h3>AUV</h3>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='/projects/team/TEAM AUV';" >Details</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="{% static 'projects/images/robokon.jpg' %}" alt="robocon." style="width:100%">
+      <h3>ROBOCON</h3>
+      <p><button class="w3-button w3-light-grey w3-block" onclick="location.href='/projects/team/TEAM ROBOCON';" >Details</button></p>
+    </div>
+  </div>
+{% endblock %}

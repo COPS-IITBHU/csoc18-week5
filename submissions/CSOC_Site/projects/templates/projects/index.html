@@ -1,0 +1,72 @@
+{% extends "site_base.html" %}
+{% load static %}
+{% block title %}{{name}}{% endblock title %}
+{% block styles %}
+    {{ block.super }}
+  <link rel="stylesheet" href="/static/projects/css/style.css">
+  <style>
+  .hero-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 400px;
+  min-height: 105px;
+  background-image: url({% static 'projects/images/' %}{{image}});
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.hero-nav .hero-nav__inner {
+  z-index: 1;
+}
+.hero-nav h1 {
+  color: #efefef;
+  font-size: 5vw;
+}
+.hero-nav:before {
+  content: "";
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: background 400ms;
+  transition: background 400ms;
+}
+.hero-nav.fixme:before {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+</style>
+{% endblock %}
+
+{% block body %}
+  <div class="hero-nav">
+    <div class="hero-nav__inner">
+        <h1>{{name}}</h1>
+    <div class="hero-nav__button">
+            <a href="#" class="btn"></a>
+        </div>
+    </div>
+</div>
+<div class="page-content">
+   <p> {{info}} </p>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  {{ block.super }}
+  <script src="/static/projects/js/index.js"></script>
+{% endblock %}
